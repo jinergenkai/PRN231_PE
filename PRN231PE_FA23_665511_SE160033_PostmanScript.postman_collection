@@ -1,0 +1,341 @@
+{
+	"info": {
+		"_postman_id": "23454180-a6a2-4741-aca5-a16b70599abd",
+		"name": "PRN231PE_FA23_665511_SE160033_Postman",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28032291"
+	},
+	"item": [
+		{
+			"name": "Login Staff",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Test login success\", () => {\r",
+							"    pm.response.to.have.status(200)\r",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email\": \"customer@SilverJewelry.com.uk\",\r\n  \"password\": \"@5\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5062/api/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5062",
+					"path": [
+						"api",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login Admin",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email\": \"admin@SilverJewelry.com.uk\",\r\n  \"password\": \"@5\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5062/api/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5062",
+					"path": [
+						"api",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Sucess",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiIxIiwiZXhwIjoxNjk5NTM5NzEyLCJpc3MiOiJsb2NhbGhvc3QiLCJhdWQiOiJsb2NhbGhvc3QifQ.nFRFzdbBL2WBaqz4znJ5GkRDSoVmcvnqmaX2o6XeR4E",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"silverJewelryId\": \"SBD2HE92292.701\",\r\n  \"silverJewelryName\": \"My Shine\",\r\n  \"silverJewelryDescription\": \"Good\",\r\n  \"metalWeight\": 100,\r\n  \"price\": 100,\r\n  \"productionYear\": 2023,\r\n  \"categoryId\": \"CC0046\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5062/odata/SilverJewelrys",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5062",
+					"path": [
+						"odata",
+						"SilverJewelrys"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Fail",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiIxIiwiZXhwIjoxNjk5NTM5OTYwLCJpc3MiOiJsb2NhbGhvc3QiLCJhdWQiOiJsb2NhbGhvc3QifQ.MlreE5rV8TknTUv9U1ePuayDCm7zo0tBjwdqR5VdEg8",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"silverJewelryId\": \"SBD2HE92292.701\",\r\n  \"silverJewelryName\": \"My Shine\",\r\n  \"silverJewelryDescription\": \"Good\",\r\n  \"metalWeight\": 100,\r\n  \"price\": -100,\r\n  \"productionYear\": 2023,\r\n  \"categoryId\": \"CC0046\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5062/odata/SilverJewelrys",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5062",
+					"path": [
+						"odata",
+						"SilverJewelrys"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiIxIiwiZXhwIjoxNjk5NTM5OTYwLCJpc3MiOiJsb2NhbGhvc3QiLCJhdWQiOiJsb2NhbGhvc3QifQ.MlreE5rV8TknTUv9U1ePuayDCm7zo0tBjwdqR5VdEg8",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"SilverJewelryId\": \"SBD2HE92292.700\",\r\n    \"SilverJewelryName\": \"My Sun Shine\",\r\n    \"SilverJewelryDescription\": \"Good\",\r\n    \"MetalWeight\": 100,\r\n    \"Price\": 100,\r\n    \"ProductionYear\": 2023,\r\n    \"CreatedDate\": \"2023-11-09T19:07:03.3850897+07:00\",\r\n    \"CategoryId\": \"CC0046\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5062/odata/SilverJewelrys('SBD2HE92292.700')",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5062",
+					"path": [
+						"odata",
+						"SilverJewelrys('SBD2HE92292.700')"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiIzIiwiZXhwIjoxNjk5NDM1MjIwLCJpc3MiOiJsb2NhbGhvc3QiLCJhdWQiOiJsb2NhbGhvc3QifQ.CgocUypY5e_surE7Phnd9J9Ad0lgY3u9gKe1eTxG-y8",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5062/api/tattoo-sticker/5580",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5062",
+					"path": [
+						"api",
+						"tattoo-sticker",
+						"5580"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Jelwery",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiI0IiwiZXhwIjoxNjk5NTM5NzkxLCJpc3MiOiJsb2NhbGhvc3QiLCJhdWQiOiJsb2NhbGhvc3QifQ.nGgtHyD5bcM_tsJNR-j2Iev_xtLeRpYb-nzwT2Hb7Os",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5062/odata/SilverJewelrys?$expand=Category",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5062",
+					"path": [
+						"odata",
+						"SilverJewelrys"
+					],
+					"query": [
+						{
+							"key": "$expand",
+							"value": "Category"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get By",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiIxIiwiZXhwIjoxNjk5NTM5OTYwLCJpc3MiOiJsb2NhbGhvc3QiLCJhdWQiOiJsb2NhbGhvc3QifQ.MlreE5rV8TknTUv9U1ePuayDCm7zo0tBjwdqR5VdEg8",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5062/odata/SilverJewelrys('SBD2HE92292.701')?$expand=Category",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5062",
+					"path": [
+						"odata",
+						"SilverJewelrys('SBD2HE92292.701')"
+					],
+					"query": [
+						{
+							"key": "$expand",
+							"value": "Category"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Filter",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiI0IiwiZXhwIjoxNjk5NTM5NzkxLCJpc3MiOiJsb2NhbGhvc3QiLCJhdWQiOiJsb2NhbGhvc3QifQ.nGgtHyD5bcM_tsJNR-j2Iev_xtLeRpYb-nzwT2Hb7Os",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5062/odata/SilverJewelrys?$expand=Category&$filter=contains(tolower(SilverJewelryName),tolower('two-tone')) or(MetalWeight ge 5 and MetalWeight le 10)",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5062",
+					"path": [
+						"odata",
+						"SilverJewelrys"
+					],
+					"query": [
+						{
+							"key": "$expand",
+							"value": "Category"
+						},
+						{
+							"key": "$filter",
+							"value": "contains(tolower(SilverJewelryName),tolower('two-tone')) or(MetalWeight ge 5 and MetalWeight le 10)"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

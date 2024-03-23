@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34202.233
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PRN231PE_SE160033_Repository", "PRN231PE_SE160033_Repository\PRN231PE_SE160033_Repository.csproj", "{5532AF22-9122-456E-A6EE-85BE99D2A53F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PRN231PE_SE160033_API", "PRN231PE_SE160033_API\PRN231PE_SE160033_API.csproj", "{3371FE42-6391-4967-BA8A-8F2A5A43DEEA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5532AF22-9122-456E-A6EE-85BE99D2A53F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5532AF22-9122-456E-A6EE-85BE99D2A53F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5532AF22-9122-456E-A6EE-85BE99D2A53F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5532AF22-9122-456E-A6EE-85BE99D2A53F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3371FE42-6391-4967-BA8A-8F2A5A43DEEA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3371FE42-6391-4967-BA8A-8F2A5A43DEEA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3371FE42-6391-4967-BA8A-8F2A5A43DEEA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3371FE42-6391-4967-BA8A-8F2A5A43DEEA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {EE132A14-F135-4C48-A646-04129AC1D531}
+	EndGlobalSection
+EndGlobal
